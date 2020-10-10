@@ -1,5 +1,10 @@
 #Version Log
 
+### v0.5
+This version requires launching with interactice terminal (**-it**) and mapping ports 80 (default) and 443 (for ssl) (-p 80\:80 -p 443\:443).
+* Dockerfile now hosts a basic html web-page with ssl (self-signed) i.e. https://localhost
+* Dockerfile automatically initiates necessary services to host the web-page when container is created.
+
 #### v0.15
 * Added new *useful commands*.
 * Added *index.html* file, a basic html web-page (visible on local-host and private-ip).
