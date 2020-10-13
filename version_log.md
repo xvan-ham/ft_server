@@ -1,7 +1,14 @@
 #Version Log
 
+## v0.7d
+Fist steps towards WordPress implementation [dev update].
+* Added installation instructions for WordPress and some common dependencies.
+* Added *keys* file with unique WordPress keys. This is a temporary file until the WordPress config file is ready.
+
 ### v0.5
 This version requires launching with interactice terminal (**-it**) and mapping ports 80 (default) and 443 (for ssl) (-p 80\:80 -p 443\:443).
+Host a simple html local web-page with PHP database and self-signed ssl key (https) using nginx.
+Pull this commit in order to use *ft_server* without WordPress.
 * Dockerfile now hosts a basic html web-page with ssl (self-signed) i.e. https://localhost
 * Dockerfile automatically initiates necessary services to host the web-page when container is created.
 
