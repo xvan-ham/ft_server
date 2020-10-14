@@ -1,5 +1,14 @@
 #Version Log
 
+## v1.00
+This version meets project specifications. Wordpress has been integrated and at first-time access, the user (admin) will be prompted to setup the wordpress web-page and customize to liking.
+This version requires launching with interactice terminal (**-it**) and mapping ports 80 (default) and 443 (for ssl) (-p 80\:80 -p 443\:443).
+`docker build -t ft_server` Executed from the directory containing the Dockerfile.
+`docker run --rm -p 80:80 -p 443:443 -it ft_server /bin/bash` to run the docker image *ft_server* as a new container.
+* Added wordpress integration.
+* Setup php to correctly connect with wordpress.
+* Re-ordered and annotated Dockerfile.
+
 ## v0.7d
 Fist steps towards WordPress implementation [dev update].
 * Added installation instructions for WordPress and some common dependencies.
