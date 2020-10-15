@@ -35,7 +35,7 @@ Run the image (as a new container) using:
 
 ### Simple nginx container exercise
 
-This simple exercise will familiarise the reader with the basics of Docker applied to the Nginx web-server. This mini-exercise is based on the YouTuber codedamn's Docker tutorial series, which I recommend any reader getting started with Docker.
+This simple exercise will familiarise the reader with the basics of Docker applied to the Nginx web-server. This mini-exercise is based on the YouTuber **codedamn's** Docker tutorial series, which I recommend any reader getting started with Docker.
 
 * Run docker (for 42 students, use **init\_docker.sh** from the **42toolbox**).
 * Exec: **docker pull nginx** to install nginx.

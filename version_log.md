@@ -1,5 +1,9 @@
 #Version Log
 
+## v1.01
+* Tweaked echo test in Dockerfile.
+* Changed index page, included a link to the wordpress page.
+
 ## v1.00
 This version meets project specifications. Wordpress has been integrated and at first-time access, the user (admin) will be prompted to setup the wordpress web-page and customize to liking.
 This version requires launching with interactice terminal (**-it**) and mapping ports 80 (default) and 443 (for ssl) (-p 80\:80 -p 443\:443).

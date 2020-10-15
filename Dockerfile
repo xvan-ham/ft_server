@@ -67,8 +67,8 @@ RUN chmod -R 755 /var/www/*
 EXPOSE 80 443
 
 # When the docker image is run (docker run), run the following commands in the container:
-# Start services and finish ssl config.
-ENTRYPOINT echo "Starting Services" && \
+# Start services and finish sql config..
+ENTRYPOINT echo "Starting Services needed to launch ft_server:" && \
 			service mysql start && \
 			echo "CREATE DATABASE wordpress;" | mysql -u root --skip-password && \
 			echo "GRANT ALL ON wordpress.* TO 'root'@'localhost';" | mysql -u root --skip-password && \
