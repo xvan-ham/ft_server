@@ -1,5 +1,10 @@
 #Version Log
 
+## v1.02
+* Added autoindexing.
+* Added scripts to switch autoindexing on / off.
+* Added script location to $PATH variables so they can be executed from anywhere.
+
 ## v1.01
 * Tweaked echo test in Dockerfile.
 * Changed index page, included a link to the wordpress page.

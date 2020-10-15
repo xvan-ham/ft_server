@@ -4,13 +4,16 @@ Project for 42 Madrid on docker, nginx, debian, wordpress.
 
 xvan-ham@student.42madrid.com
 
-Docker enables you to run in a controlled isolated environment, meaning anyone who runs a program within the docker environment will be able to do so in **exaclty** the same environment - therefore no machine-specific problems can arise. It can do so without without needing a full VM (Virtual Machine), which makes Docker more lightweight (Docker uses the host OS to manage hardware rather than a VM splitting hardware use). As a note, by default Docker will kill the container when the **docker run** process is complete.
-
 Build this docker image using:
 `docker build -t ft_server .` which will build the docker image using the Dockerfile in the current directory, tagging said image as *ft_server*.
 
 Run the image (as a new container) using:
 `docker run --rm -p 80:80 -p 443:443 -it ft_server /bin/bash` which will run the container with the specified port mapping (80 for default server, 443 for ssl verification) and an interactive terminal using the `/bin/bash` command (/bin/bash can be omitted from this command, it will default to it); optionally name the container using `--name <container name>` switch.
+
+By default, ft_server will run with **autoindexing** **ON**.
+To change, type `autoindex_off`, use `autoindex_on` to turn on again.
+
+Docker enables you to run in a controlled isolated environment, meaning anyone who runs a program within the docker environment will be able to do so in **exaclty** the same environment - therefore no machine-specific problems can arise. It can do so without without needing a full VM (Virtual Machine), which makes Docker more lightweight (Docker uses the host OS to manage hardware rather than a VM splitting hardware use). As a note, by default Docker will kill the container when the **docker run** process is complete.
 
 ### Useful Commands for ft_server
 * **docker image ls** - *lists* current docker images.

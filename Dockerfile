@@ -22,6 +22,12 @@ RUN apt-get -y install php-gd php-intl php-mbstring php-soap php-xml php-xmlrpc 
 # Install curl (to grab latest WordPress and phpMyAdmin)
 RUN apt-get -y install curl
 
+# Copy nginx's auto-index toggle scripts (ON by default) to /home/bin/.
+# Accessible from anywhere within the container (added to $PATH variable).
+# Simply run using: autoindex_on; autoindex_off.
+RUN mkdir /home/bin
+COPY srcs/autoindex_* /home/bin/
+
 # Copy proof-of-success material: index.html is the basic html web-page that is set to be viewed first;info.php will show that php is set up correctly.
 # To view this material, simply navigate to: http://localhost to view the html web-page; navigate to: http://localhost/info.php to view php info page (proving this service is working correctly.
 COPY srcs/index.html /var/www/html/index.html
@@ -77,4 +83,5 @@ ENTRYPOINT echo "Starting Services needed to launch ft_server:" && \
 			service nginx start && \
 			service php7.3-fpm start && \
 			service php7.3-fpm status && \
+			export PATH=$PATH:/home/bin && \
 			/bin/bash

@@ -1,0 +1,4 @@
+sed -i "s/autoindex on/autoindex off/" /etc/nginx/sites-available/default
+echo -e "Switched \e[4mautoindex\e[0m \e[101;30mOFF\e[0m. Restarting nginx."
+service nginx restart
+echo -e "nginx is \e[103;30mready\e[0m"
