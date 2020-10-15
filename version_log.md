@@ -1,5 +1,8 @@
 #Version Log
 
+## v1.025
+* Fixed README formatting issue.
+
 ## v1.02
 * Added autoindexing.
 * Added scripts to switch autoindexing on / off.
